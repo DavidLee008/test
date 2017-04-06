@@ -14,7 +14,7 @@ class test1Spider(Spider):
     def parse(self, response):
         sel = Selector(response)
         item = Test1Item()
-        #urls = sel.xpath('//h3/a/@href').extract()
+        item['link'] = sel.xpath('//h3/a/@href').extract()
         #for url in urls:
         #request = Request(url= 'http://www.leiphone.com/', dont_filter=True)
         #request.meta['PhantomJS'] = True

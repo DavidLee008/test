@@ -69,6 +69,7 @@ DOWNLOAD_DELAY = 3
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'test_1.pipelines.Test1Pipeline': 300,
+    'test_1.pipelines.MySQLTest1Pipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

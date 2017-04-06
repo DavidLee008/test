@@ -34,9 +34,10 @@ scrollToBottom()
 class PhantomJSMiddleware(object):
     @classmethod
     def process_request(cls, request, spider):
-        request = Request(url= 'http://www.leiphone.com/', dont_filter=True)
-        request.meta['PhantomJS'] = True
-        if request.meta.has_key('PhantomJS'):
+        #request = Request(url= 'http://www.leiphone.com/', dont_filter=True)
+        #request.meta['PhantomJS'] = True
+        #if request.meta.has_key('PhantomJS'):
+        if spider.name == 'test_1':
             driver = webdriver.PhantomJS()
             driver.get(request.url)
             for i in range(3):
